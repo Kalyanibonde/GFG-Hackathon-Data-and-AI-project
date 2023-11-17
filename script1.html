@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personality Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+      
+    }
+    #myChart {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.chart-active {
+    background: rgba(255, 255, 255, 0.9);
+  }
+    .question-box {
+      border: 5px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px solid purple;
+    }
+    .question-box:hover {
+      border: 5px solid yellow;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 50px 25px #0fa3f3;
+    }
+    button{
+     height: 70px;
+     width: 120px;
+     background-color: gold;
+    }
+    button:hover{
+        background-color:green;
+        border: 2px solid greenyellow;
+    }
+ p{  font-size: larger;
+    font-weight: bolder;
+ }
+ input:hover {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mt-4" style="font-weight: bolder; color: deeppink;box-shadow: 0 0 50px 25px #0febf3;">Personality Test</h1>
+<br><br>
+<div class="question-box">
+<p>Do you prefer working alone or as part of a team?</p>
+<input type="radio" id="option1" name="q1" value="agree">
+<label for="option1">Agree</label><br>
+<input type="radio" id="option2" name="q1" value="disagree">
+<label for="option2">Disagree</label><br>
+<input type="radio" id="option3" name="q1" value="sometimes">
+<label for="option3">Sometimes</label><br>
+<input type="radio" id="option4" name="q1" value="never">
+<label for="option4">Never</label></div><br><br>
+
+<!-- Add more questions following the same pattern -->
+<div class="question-box">
+<p>Can you work effectively in a team?</p>
+<input type="radio" id="option5" name="q2" value="agree">
+<label for="option5">Agree</label><br>
+<input type="radio" id="option6" name="q2" value="disagree">
+<label for="option6">Disagree</label><br>
+<input type="radio" id="option7" name="q2" value="sometimes">
+<label for="option7">Sometimes</label><br>
+<input type="radio" id="option8" name="q2" value="never">
+<label for="option8">Never</label></div><br><br>
+
+<!-- Add more questions following the same pattern -->
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option9" name="q3" value="agree">
+<label for="option9">Agree</label><br>
+<input type="radio" id="option10" name="q3" value="disagree">
+<label for="option10">Disagree</label><br>
+<input type="radio" id="option11" name="q3" value="sometimes">
+<label for="option11">Sometimes</label><br>
+<input type="radio" id="option12" name="q3" value="never">
+<label for="option12">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option13" name="q4" value="agree">
+<label for="option13">Agree</label><br>
+<input type="radio" id="option14" name="q4" value="disagree">
+<label for="option14">Disagree</label><br>
+<input type="radio" id="option15" name="q4" value="sometimes">
+<label for="option15">Sometimes</label><br>
+<input type="radio" id="option16" name="q4" value="never">
+<label for="option16">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option17" name="q5" value="agree">
+<label for="option17">Agree</label><br>
+<input type="radio" id="option18" name="q5" value="disagree">
+<label for="option18">Disagree</label><br>
+<input type="radio" id="option19" name="q5" value="sometimes">
+<label for="option19">Sometimes</label><br>
+<input type="radio" id="option20" name="q5" value="never">
+<label for="option20">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option21" name="q6" value="agree">
+<label for="option21">Agree</label><br>
+<input type="radio" id="option22" name="q6" value="disagree">
+<label for="option22">Disagree</label><br>
+<input type="radio" id="option23" name="q6" value="sometimes">
+<label for="option23">Sometimes</label><br>
+<input type="radio" id="option24" name="q6" value="never">
+<label for="option24">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option25" name="q7" value="agree">
+<label for="option25">Agree</label><br>
+<input type="radio" id="option26" name="q7" value="disagree">
+<label for="option26">Disagree</label><br>
+<input type="radio" id="option27" name="q7" value="sometimes">
+<label for="option27">Sometimes</label><br>
+<input type="radio" id="option28" name="q7" value="never">
+<label for="option28">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option29" name="q8" value="agree">
+<label for="option29">Agree</label><br>
+<input type="radio" id="option30" name="q8" value="disagree">
+<label for="option30">Disagree</label><br>
+<input type="radio" id="option31" name="q8" value="sometimes">
+<label for="option31">Sometimes</label><br>
+<input type="radio" id="option32" name="q8" value="never">
+<label for="option32">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option33" name="q9" value="agree">
+<label for="option33">Agree</label><br>
+<input type="radio" id="option34" name="q9" value="disagree">
+<label for="option34">Disagree</label><br>
+<input type="radio" id="option35" name="q9" value="sometimes">
+<label for="option35">Sometimes</label><br>
+<input type="radio" id="option36" name="q9" value="never">
+<label for="option36">Never</label></div><br><br>
+
+<div class="question-box">
+<p>Are you comfortable taking on leadership roles?</p>
+<input type="radio" id="option37" name="q10" value="agree">
+<label for="option37">Agree</label><br>
+<input type="radio" id="option38" name="q10" value="disagree">
+<label for="option38">Disagree</label><br>
+<input type="radio" id="option39" name="q10" value="sometimes">
+<label for="option39">Sometimes</label><br>
+<input type="radio" id="option40" name="q10" value="never">
+<label for="option40">Never</label></div><br><br><br>
+
+<!-- Add more questions following the same pattern -->
+
+<button onclick="submitTest()" style="display:flex;align-items: center; justify-content: center; margin-left: 500px;">Submit</button>
+<br><br><br>
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script>
+  let data = {
+    agree: 0,
+    disagree: 0,
+    sometimes: 0,
+    never: 0
+  };
+
+  function submitTest() {
+    for (let i = 1; i <= 3; i++) {
+      var q = document.querySelector('input[name="q' + i + '"]:checked');
+      if (q) {
+        data[q.value]++;
+      } else {
+        alert('Please answer all questions.');
+        return;
+      }
+    }
+    updateChart();
+  }
+
+  function updateChart() {
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const totalCount = data.agree + data.disagree + data.sometimes + data.never;
+    const percentages = {
+      agree: ((data.agree / totalCount) * 100).toFixed(2),
+      disagree: ((data.disagree / totalCount) * 100).toFixed(2),
+      sometimes: ((data.sometimes / totalCount) * 100).toFixed(2),
+      never: ((data.never / totalCount) * 100).toFixed(2),
+    };
+
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['JOB1', 'JOB2', 'JOB3', 'JOB4'],
+        datasets: [{
+          label: 'Personality Test Results',
+          data: [percentages.agree, percentages.disagree, percentages.sometimes, percentages.never],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Percentage (%)'
+            }
+          }
+        }
+      }
+    });
+  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('button').click(function() {
+      $('#myChart').addClass('chart-active');
+    });
+  });
+</script>
+</body>
+</html>
