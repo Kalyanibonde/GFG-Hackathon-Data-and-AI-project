@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       
+        <style>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+            *{
+                padding:0;
+                margin:0;
+                box-sizing:border-box;
+            }
+            .main{
+                width:100%;
+                height:100vh;
+                background:url("time.jpg") center center;
+                background-size:cover;
+            }
+            .overlay{
+                width:100%;
+                height:100%;
+                background-color:rgba(0,0,0,0.7);
+                display:flex;
+                flex-direction:column;
+                color:white;
+                align-items:center;
+            }
+            .title{
+                font-size:2.5rem;
+                color:white;
+                text-align:center;
+                margin-top:30px;
+
+            }
+            .col{
+                width:1000px;
+                margin-top:30px;
+                display:flex;
+                justify-content:center;
+               
+            }
+            input{
+                width:60%;
+                height:50px;
+                background-color:rgba(255,255,255,0.9);
+                border-color:transparent;
+                border-radius:5px;
+                text-align:center;
+                font-size:30px;
+            }
+            .col div{
+                width:250px;
+                text-align:center;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const enddate = "9 January 2024 12:00 pm";
+                const endDateElement = document.getElementById('end-date');
+    
+                if (endDateElement) {
+                    endDateElement.innerText = enddate;
+                }
+    
+                const inputs = document.querySelectorAll("input");
+    
+                function clock() {
+                    const end = new Date(enddate);
+                    const now = new Date();
+                    const diff = (end - now) / 1000;
+                    console.log(diff);
+                    inputs[0].value = Math.floor(diff / 3600 / 24);
+                    inputs[1].value = Math.floor((diff / 3600)% 24);
+                    inputs[2].value = Math.floor((diff /60 )%60);
+                    inputs[3].value = Math.floor(diff)% 60;
+
+                    //convert into days
+                }
+    
+                clock();
+                setInterval(
+                    ()=> {
+                        clock()
+                    },1000
+                )
+            });
+        </script>
+        <div class="main">
+            <div class="overlay">
+                <div class="title">WE ARE COMING SOON</div>
+                <div class="title" id="end-date"> 8 January 2024 12:00 pm</div>
+                <div class="col">
+                    <div >
+                        <input type="text" readonly value="0">
+                        <br>
+                        <label for="">Days</label>
+                    </div>
+                    <div >
+                        <input type="text" readonly value="0">
+                        <br>
+                        <label for="">Hours</label>
+                    </div>
+                    <div >
+                        <input type="text" readonly value="0">
+                        <br>
+                        <label for="">Minutes</label>
+                    </div>
+                    <div >
+                        <input type="text" readonly value="0">
+                        <br>
+                        <label for="">Seconds</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
